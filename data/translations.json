@@ -1,0 +1,130 @@
+{
+    "title": {
+        "fr": "Carrousel Ovale",
+        "en": "Oval Carousel"
+    },
+    "site-title": {
+        "fr": "Portfolio de CHEAM Nathan",
+        "en": "Portfolio of CHEAM Nathan"
+    },
+    "button-cv-fr": {
+        "fr": "Obtenir mon CV en français",
+        "en": "Get my CV in French"
+    },
+    "button-cv-en": {
+        "fr": "Obtenir mon CV en anglais",
+        "en": "Get my CV in English"
+    },
+    "language-switcher": {
+        "fr": "FR",
+        "en": "EN"
+    },
+    "about": {
+        "fr": "Qui suis-je ?",
+        "en": "Who am I?"
+    },
+    "skills": {
+        "fr": "Mes Acquis",
+        "en": "My Skills"
+    },
+    "education": {
+        "fr": "Mes Formations",
+        "en": "My Education"
+    },
+    "hobbies": {
+        "fr": "Mes Passe-temps",
+        "en": "My Hobbies"
+    },
+    "contact": {
+        "fr": "Me contacter",
+        "en": "Contact Me"
+    },
+    "experience": {
+        "fr": "Mes expériences",
+        "en": "My Experiences"
+    },
+    "about-content": {
+        "fr": "Bonjour, je m'appelle <strong>Nathan Cheam</strong> et j'ai 21 ans. Actuellement étudiant en deuxième année de <strong>BUT Informatique</strong> à l'IUT de Lens, je m'efforce de transformer des idées en solutions concrètes et performantes.",
+        "en": "Hello, my name is <strong>Nathan Cheam</strong> and I am 21 years old. Currently a second-year student in <strong>BUT Informatique</strong> at IUT de Lens, I strive to turn ideas into concrete and efficient solutions."
+    },
+    "about-content-2": {
+        "fr": "Passionné par les nouvelles technologies et la résolution de problèmes complexes, je suis un jeune développeur en constante quête d'innovation.",
+        "en": "Passionate about new technologies and solving complex problems, I am a young developer constantly seeking innovation."
+    },
+    "about-content-3": {
+        "fr": "Pour moi, chaque projet est une opportunité de grandir, d'apprendre et de collaborer avec des esprits créatifs.",
+        "en": "For me, each project is an opportunity to grow, learn, and collaborate with creative minds."
+    },
+    "qualities": {
+        "fr": "Voici quelques-unes de mes qualités :",
+        "en": "Here are some of my qualities:"
+    },
+    "collaborative": {
+        "fr": "Collaboratif",
+        "en": "Collaborative"
+    },
+    "rigorous": {
+        "fr": "Rigoureux",
+        "en": "Rigorous"
+    },
+    "curious": {
+        "fr": "Curieux",
+        "en": "Curious"
+    },
+    "dynamic": {
+        "fr": "Dynamique",
+        "en": "Dynamic"
+    },
+    "web-development": {
+        "fr": "Développement Web",
+        "en": "Web Development"
+    },
+    "software-development": {
+        "fr": "Développement Logiciel",
+        "en": "Software Development"
+    },
+    "database-management": {
+        "fr": "Gestion de base de données",
+        "en": "Database Management"
+    },
+    "education-content": {
+        "fr": "Je vous présente la frise chronologique de mon parcours académiques. Après la frise, vous pourrez également voir ainsi qu'accéder à mes projets réalisés lors de mes années de formation.",
+        "en": "I present to you the timeline of my academic journey. After the timeline, you can also see and access my projects completed during my years of training."
+    },
+    "education-content-2": {
+        "fr": "N'hésitez pas à cliquer sur une école si vous souhaitez obtenir davantage d'informations.",
+        "en": "Feel free to click on a school if you want more information."
+    },
+    "projects-title": {
+        "fr": "Mes Projets",
+        "en": "My Projects"
+    },
+    "projects-content": {
+        "fr": "Découvrez quelques-uns de mes projets réalisés lors de mon parcours :",
+        "en": "Discover some of my projects completed during my journey:"
+    },
+    "hobbies-content": {
+        "fr": "Je suis passionné par la musique, la lecture et les jeux vidéo.",
+        "en": "I am passionate about music, reading, and video games."
+    },
+    "contact-content": {
+        "fr": "Vous pouvez me contacter par email à l'adresse",
+        "en": "You can contact me by email at"
+    },
+    "contact-email": {
+        "fr": "Envoyer un email",
+        "en": "Send an email"
+    },
+    "experience-content": {
+        "fr": "Je vous présente un aperçu de mes expériences professionnelles depuis ces deux dernières années :",
+        "en": "Here is an overview of my professional experiences over the past two years:"
+    },
+    "next": {
+        "fr": "Suivant",
+        "en": "Next"
+    },
+    "prev": {
+        "fr": "Précédent",
+        "en": "Previous"
+    }
+}

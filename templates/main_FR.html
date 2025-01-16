@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrousel Ovale</title>
+    <link rel="stylesheet" href="../style/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+    <script src="../scripts/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div id="site-title">Portfolio de CHEAM Nathan</div>
+        <nav>
+            <button class="button button-cv" onclick="location.href='../CV_etudiant_CHEAM_Nathan.pdf';" style="font-size: 2vh;">Obtenir mon CV en français</button>
+            <button class="button button-cv" onclick="location.href='../CV_student_CHEAM_Nathan.pdf';" style="font-size: 2vh;">Obtenir mon CV en anglais</button>
+        </nav>
+        <button class="language-switcher" onclick="switchLanguage()">FR</button>
+    </header>
+    <div class="container">
+        <img class="photo_vo" src="../pictures/photo_nathan.png">
+        <div class="wrapper">
+            <div class="item active" data-target="about">
+                Qui suis-je ?
+            </div>
+            <div class="item" data-target="skills">
+                Mes Acquis
+            </div>
+            <div class="item" data-target="education">
+                Mes Formations
+            </div>
+            <div class="item" data-target="hobbies">
+                Mes Passe-temps
+            </div>
+            <div class="item" data-target="contact">
+                Me contacter
+            </div>
+            <div class="item" data-target="experience">
+                Mes expériences
+            </div>
+            <svg viewBox="0 0 400 300">
+                <ellipse id="holder" class="st0" cx="200" cy="150" rx="400" ry="150" />
+            </svg>
+        </div>
+    </div>
+    <div class="controls" style="text-align: center; justify-content: center; display: flex;">
+        <button id="next" style="margin-right: 5vw;">Suivant</button>
+        <button id="prev" style="margin-left: 5vw;">Précédent</button>
+    </div>
+    <div>
+        <section id="about" class="page"">
+            <h1>Qui suis-je ?</h1>
+            <p>
+                Bonjour, je m'appelle <strong>Nathan Cheam</strong> et j'ai 21 ans. 
+                Actuellement étudiant en deuxième année de <strong>BUT Informatique</strong> à l'IUT de Lens, 
+                je m'efforce de transformer des idées en solutions concrètes et performantes.
+            </p>
+            <p>
+                Passionné par les nouvelles technologies et la résolution de problèmes complexes, je suis un jeune développeur en constante quête d'innovation.
+            </p>
+            <p> 
+                Pour moi, chaque projet est une opportunité de grandir, d'apprendre et de collaborer avec des esprits créatifs.
+            </p>
+            <p style="margin-bottom: 0%;">Voici quelques-unes de mes qualités : </p>
+            <div style="display: flex; flex-direction: row;">
+                <ul>
+                    <li>Collaboratif</li>
+                    <li>Rigoureux</li>
+                </ul>
+                <ul>
+                    <li>Curieux</li>
+                    <li>Dynamique</li>
+                </ul>
+            </div>
+        </section>
+        <section id="skills" class="page" style="display: none;">
+            <h1>Mes Acquis</h1>
+            <form class="form-container">
+                <div class="form-title" style="background-color: #00a7a7;">Développement Web</div>
+                <div style="display: flex; flex-direction: row; justify-content: space-between; padding-bottom: 1em;">
+                    <div style="background-color: white; height: 10vh; width: 6.35vw; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5vh 0 0.5vh 0; border-radius: 15px;">
+                        <div class="tooltip">
+                            <img src="../pictures/php.png" alt="Php" style="width: 4.2vw;">
+                            <span class="tooltiptext" style="top: 105%;">PHP</span>
+                        </div>
+                    </div>
+                    <div style="background-color: white; height: 10vh; width: 6.35vw; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5vh 0 0.5vh 0; border-radius: 15px;">
+                        <div class="tooltip">
+                            <img src="../pictures/html.png" alt="Html" style="width: 3.8vw;">
+                            <span class="tooltiptext">HTML</span>
+                        </div>
+                    </div>
+                    <div style="background-color: white; height: 10vh; width: 6.35vw; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5vh 0 0.5vh 0; border-radius: 15px;">
+                        <div class="tooltip">
+                            <img src="../pictures/css.png" alt="Css" style="width: 3.8vw;">
+                            <span class="tooltiptext">CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: space-around; padding-top: 1em;">
+                    <div style="background-color: white; height: 10vh; width: 6.35vw; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5vh 0 0.5vh 0; border-radius: 15px;">
+                        <div class="tooltip">
+                            <img src="../pictures/Laravel.png" alt="Laravel" style="width: 3.5vw;">
+                            <span class="tooltiptext" style="top: 115%">Laravel</span>
+                        </div>
+                    </div>
+                    <div style="background-color: white; height: 10vh; width: 6.35vw; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5vh 0 0.5vh 0; border-radius: 15px;">
+                        <div class="tooltip">
+                            <img src="../pictures/flask.png" alt="Flask" style="width: 6vw;">
+                            <span class="tooltiptext" style="top: 127%;">Flask</span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form class="form-container">
+                <div class="form-title" style="background-color: #00a7a7;">Développement Logiciel</div>
+                <div style="display: flex; flex-direction: row; justify-content: space-between; padding-bottom: 1em;">
+                    <div style="background-color: white; height: 10vh; width: 6.35vw; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5vh 0 0.5vh 0; border-radius: 15px;">
+                        <div class="tooltip">
+                            <img src="../pictures/java.png" alt="Java" style="width: 4.5vw;">
+                            <span class="tooltiptext" style="top: 105%;">Java</span>
+                        </div>
+                    </div>
+                    <div style="background-color: white; height: 10vh; width: 6.35vw; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5vh 0 0.5vh 0; border-radius: 15px;">                        
+                        <div class="tooltip">
+                            <img src="../pictures/javafx_logo.jpg" alt="JavaFX" style="width: 5vw;">
+                            <span class="tooltiptext">JavaFX</span>
+                        </div>
+                    </div>
+                    <div style="background-color: white; height: 10vh; width: 6.35vw; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5vh 0 0.5vh 0; border-radius: 15px;">                        
+                        <div class="tooltip">
+                            <img src="../pictures/SceneBuilder.png" alt="SceneBuilder" style="width: 4vw;">
+                            <span class="tooltiptext">SceneBuilder</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: space-between; padding-top: 1em;">
+                    <div style="background-color: white; height: 10vh; width: 6.35vw; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5vh 0 0.5vh 0; border-radius: 15px;">                        
+                        <div class="tooltip">
+                            <img src="../pictures/python.png" alt="Python" style="width: 4vw;">
+                            <span class="tooltiptext">Python</span>
+                        </div>
+                    </div>
+                    <div style="background-color: white; height: 10vh; width: 6.35vw; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5vh 0 0.5vh 0; border-radius: 15px;">                        
+                        <div class="tooltip">
+                            <img src="../pictures/sonarlint.png" alt="Sonarlint" style="width: 4.2vw;">
+                            <span class="tooltiptext" style="top: 108%;">Sonarlint</span>
+                        </div>
+                    </div>
+                    <div style="background-color: white; height: 10vh; width: 6.35vw; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5vh 0 0.5vh 0; border-radius: 15px;">                        
+                        <div class="tooltip">
+                            <img src="../pictures/JUnit_5.png" alt="JUnit_5" style="width: 4.8vw;">
+                            <span class="tooltiptext" style="top: 208%;">JUnit 5</span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form class="form-container">
+                <div class="form-title" style="background-color: #00a7a7;">Gestion de base de données</div>
+                <div style="display: flex; flex-direction: row; justify-content: space-between; padding-bottom: 1em;">
+                    <div style="background-color: white; height: 10vh; width: 6.35vw; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5vh 0 0.5vh 0; border-radius: 15px;">                        
+                        <div class="tooltip">
+                            <img src="../pictures/jdbc.jpg" alt="Jdbc" style="width: 5.2vw;">
+                            <span class="tooltiptext" style="top: 150%">JDBC</span>
+                        </div>
+                    </div>
+                    <div style="background-color: white; height: 10vh; width: 6.35vw; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5vh 0 0.5vh 0; border-radius: 15px;">                        
+                        <div class="tooltip">
+                            <img src="../pictures/mysql.png" alt="MySQL" style="width: 4.5vw;">
+                            <span class="tooltiptext" style="top: 105%;">MySQL</span>
+                        </div>
+                    </div>
+                    <div style="background-color: white; height: 10vh; width: 6.35vw; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5vh 0 0.5vh 0; border-radius: 15px;">                        
+                        <div class="tooltip">
+                            <img src="../pictures/plsql.png" alt="PlSQL" style="width: 5vw;">
+                            <span class="tooltiptext" style="top: 100%;">PlSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: space-around; padding-top: 1em;">
+                    <div style="background-color: white; height: 10vh; width: 6.35vw; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5vh 0 0.5vh 0; border-radius: 15px;">                        
+                        <div class="tooltip">
+                            <img src="../pictures/Postgresql_elephant.png" alt="PostgreSQL" style="width: 4vw;">
+                            <span class="tooltiptext">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div style="background-color: white; height: 10vh; width: 6.35vw; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5vh 0 0.5vh 0; border-radius: 15px;">                        
+                        <div class="tooltip">
+                            <img src="../pictures/SQLite.png" alt="SQLite" style="width: 5vw; justify-content: center;">
+                            <span class="tooltiptext" style="top: 155%;">SQLite</span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section id="education" class="page" style="display: none;">
+            <h1>Mes Formations</h1>
+            <p>Je vous présente la frise chronologique de mon parcours académiques. Après la frise, vous pourrez également voir ainsi qu'accéder à mes projets réalisés lors de mes années de formation.</p>
+            <p>N'hésitez pas à cliquer sur une école si vous souhaitez obtenir davantage d'informations.</p>
+            <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; height: 70vh;">
+                <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <div class="bulle_edu">
+                        <p class="nom_ecole">Institut du Génie Informatique et Industriel</p>
+                        <p>Centrale Lille</p>
+                        <p>Septembre 2022 - Juin 2023</p>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="dot top"><div class="dot2 top2"></div></div>
+                    <div class="dot center"><div class="dot2 center"></div></div>
+                    <div class="dot bottom"><div class="dot2 bottom2"></div></div>
+                </div>
+                <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <div class="bulle_edu" style="margin-bottom: 12vh;">
+                        <p class="nom_ecole">Institut Universitaire de Technologie</p>
+                        <p>Université d'Artois</p>
+                        <p>Septembre 2023 -</p>
+                    </div>
+                    <div class="bulle_edu" style="margin-top: 12vh;">
+                        <p class="nom_ecole">Lycée Louis Blaringhem</p>
+                        <p>Académie de Lille</p>
+                        <p>Septembre 2019 - Juin 2022</p>
+                    </div>
+                </div>
+            </div>
+            <h2>Mes Projets</h2>
+            <p>Découvrez quelques-uns de mes projets réalisés lors de mon parcours :</p>
+            
+            <div id="projects" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                <a href="https://github.com/NathanCheam/Juste-Prix" class="project-card">
+                <div class="project">
+                    <img src="../pictures/projets/logo.png" alt="Projet 1: Application web en PHP" />
+                    <h3 style="background-color: #fff; color: #7d00ac;">Le Juste Prix</h3>
+                </div>
+                </a>
+                <a href="https://github.com/NathanCheam/CineyJourney" class="project-card">
+                <div class="project">
+                    <img src="../pictures/projets/CineyJourney.png" alt="Projet 2: Site de voyage" />
+                    <h3 style="background-color: #fff; color: #7d00ac;">CineyJourney</h3>
+                </div>
+                </a>
+                <a href="https://github.com/NathanCheam/Projet_2eme_annee_IUT" class="project-card">
+                <div class="project">
+                    <img src="../pictures/projets/lensjudge.png" alt="Projet 3: Juge Automatique" />
+                    <h3 style="background-color: #fff; color: #7d00ac;">Lens Judge</h3>
+                </div>
+                </a>
+            </div>
+        </section>
+        <section id="hobbies" class="page" style="display: none;">
+            <h1>Mes Passe-temps</h1>
+            <p>Je suis passionné par la musique, la lecture et les jeux vidéo.</p>
+        </section>
+        <section id="contact" class="page" style="display: none;">
+            <h1>Me contacter</h1>
+            <p>Vous pouvez me contacter par email à l'adresse
+                <a href="mailto:nathan.cheam.pro@gmail.com?subject=Subject%20Here&body=Body%20text%20here">Envoyer un email</a>
+            </p>
+        </section>
+        <section id="experience" class="page" style="display: none;">
+            <h1>Mes expériences</h1>
+            <p>Je vous présente un aperçu de mes expériences professionnelles depuis ces deux dernières années :</p>
+            <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; height: 70vh;">
+                <div class="line" style="z-index: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <img src="../pictures/fleches/jaune.png" alt="Flèche" style="width: 2vw; padding-top: 45vh; padding-bottom: 5vh; top: -10;">
+                    <div class="bulle_exp" style="z-index: 1; margin-bottom: 1.5vh;">
+                        <div style="background-color: #fff; border: 1px solid; border-radius: 15px;">
+                            <p class="nom_exp">Vice-Président du Bureau Des Etudiants</p>
+                            <p>Lens (62300) - France</p>
+                            <p>Avril 2024 - Avril 2025</p>
+                        </div>
+                        <div style="background-color: #d2d2d2; margin: 0; border-bottom: 15px;">
+                            <p>Gestion de l’association du BDE informatique à l’IUT</p>
+                        </div>
+                    </div>
+                    <div class="bulle_exp" style="z-index: 1; margin-top: 1.5vh;">
+                        <div style="background-color: #fff; border: 1px solid; border-radius: 15px;">
+                            <p class="nom_exp">Développeur Web chez Adexos</p>
+                            <p>Béthune (62400) - France</p>
+                            <p>Juin 2023 - Juillet 2023</p>
+                        </div>
+                        <div style="background-color: #d2d2d2; margin: 0; border-bottom: 15px;">
+                            <p>Participation à la conception d’un logiciel de gestion des clients en utilisant Symfony</p>
+                        </div>
+                    </div>
+                    <div class="dot bottom"><div class="dot2 bottom2"></div></div>
+                </div>
+            </div> 
+        </section>
+    </div>
+</body>
+</html>

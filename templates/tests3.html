@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>test Carrousel</title>
+    <link rel="stylesheet" href="../style/test_carrousel.css">
+    <script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+    <script type="text/javascript" src="js/jquery-path.js"></script>
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: pink;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Position the tooltip above the text */
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var nombre = $("#container ul li").length;
+            var ecart = 360 / nombre;
+            var centerX = $("#container").width() / 2;
+            var centerY = $("#container").height() / 2;
+            var radius = 200;
+            var angles = [];
+
+            function positionElements() {
+                for (var i = 0; i < nombre; i++) {
+                    var angle = angles[i] * (Math.PI / 180);
+                    var x = centerX + radius * Math.cos(angle) - $("#container ul li").width() / 2;
+                    var y = centerY + radius * Math.sin(angle) - $("#container ul li").height() / 2;
+                    $("#container li:eq(" + i + ")").css({ left: x + 'px', top: y + 'px' });
+                }
+            }
+
+            for (var i = 0; i < nombre; i++) {
+                angles.push(i * ecart);
+            }
+
+            positionElements();
+
+            $("button.gauche").click(function() {
+                for (var i = 0; i < nombre; i++) {
+                    angles[i] += ecart;
+                }
+                positionElements();
+            });
+
+            $("button.droite").click(function() {
+                for (var i = 0; i < nombre; i++) {
+                    angles[i] -= ecart;
+                }
+                positionElements();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="container"> <br> <br> <br>
+        <ul>
+            <li class="tooltip">
+                <img src="../pictures/photo_canva.png" alt="Php" style="width: 4.2vw;">
+                <span class="tooltiptext">Php</span>
+            </li>
+            <li class="tooltip">
+                <img src="../pictures/Skynet-Terminator-II-Couleur-Blanc-Marque-Checkpoint-3_720x.webp" alt="Html" style="width: 3.8vw;">
+                <span class="tooltiptext">Html</span>
+            </li>
+            <li class="tooltip">
+                <img src="../pictures/photo_canva.png" alt="Css" style="width: 3.8vw;">
+                <span class="tooltiptext">Css de mes couilles</span>
+            </li>
+        </ul>
+        <button class="droite">A droite !</button>
+        <button class="gauche">A gauche !</button>
+    </div>
+</body>
+</html>
